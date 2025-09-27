@@ -1,23 +1,23 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsMobileMenuOpen(false);
-    };
+      setIsMobileMenuOpen(false)
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-500 shadow-lg">
@@ -34,7 +34,7 @@ const Header = () => {
 
         <nav
           className={`navbar ${
-            isMobileMenuOpen ? "active" : ""
+            isMobileMenuOpen ? 'active' : ''
           } hidden lg:block`}
         >
           <ul className="flex items-center gap-4">
@@ -271,7 +271,7 @@ const Header = () => {
         </nav>
       )}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

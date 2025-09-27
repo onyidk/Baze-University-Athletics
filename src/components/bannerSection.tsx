@@ -5,26 +5,26 @@ import Link from 'next/link'
 const BannerSection = () => {
   const banners = [
     {
-      image: "/assets/images/teamphoto.jpg",
+      image: '/assets/images/teamphoto.jpg',
       content: {
-        span: "limited slots",
-        title: "starlets"
-      }
+        span: 'limited slots',
+        title: 'starlets',
+      },
     },
     {
-      image: "/assets/images/othersports.PNG", 
+      image: '/assets/images/othersports.PNG',
       content: {
-        span: "limited slots",
-        title: "football/badminton/table tennis/volleyball"
-      }
+        span: 'limited slots',
+        title: 'football/badminton/table tennis/volleyball',
+      },
     },
     {
-      image: "/assets/images/boysteamphoto.jpg",
+      image: '/assets/images/boysteamphoto.jpg',
       content: {
-        span: "limited slots",
-        title: "bulldogs" 
-      }
-    }
+        span: 'limited slots',
+        title: 'bulldogs',
+      },
+    },
   ]
 
   return (
@@ -32,7 +32,7 @@ const BannerSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {banners.map((banner, index) => (
           <div key={index} className="relative h-96 overflow-hidden group">
-            <Image 
+            <Image
               src={banner.image}
               alt={`Banner ${index + 1}`}
               fill
@@ -45,7 +45,7 @@ const BannerSection = () => {
               <h3 className="text-white text-2xl font-bold mb-4 pt-20">
                 {banner.content.title}
               </h3>
-              <Link 
+              <Link
                 href="https://docs.google.com/forms/d/1jQhLQYVWiSpkaQGz7n9_Mg7rqIyyBuPN_pc3ieovhh4/edit"
                 target="_blank"
                 className="inline-block px-10 py-3 bg-gray-500 text-black font-bold rounded-lg hover:bg-black hover:text-gray-500 transition-all duration-300"

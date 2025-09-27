@@ -1,49 +1,49 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const HeroSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
     {
-      image: "/assets/images/nusaybah2.png",
+      image: '/assets/images/nusaybah2.png',
       content: {
-        span: "Dare to dream",
-        title: "starlets",
+        span: 'Dare to dream',
+        title: 'starlets',
       },
     },
     {
-      image: "/assets/images/nusaybah.png",
+      image: '/assets/images/nusaybah.png',
       content: {
-        span: "Dare to dream",
-        title: "starlets",
+        span: 'Dare to dream',
+        title: 'starlets',
       },
     },
     {
-      image: "/assets/images/nusaybah2.png",
+      image: '/assets/images/nusaybah2.png',
       content: {
-        span: "Dare to dream",
-        title: "starlets",
+        span: 'Dare to dream',
+        title: 'starlets',
       },
     },
-  ];
+  ]
 
   const nextSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex + 1) % slides.length);
-  };
+    setCurrentSlide(prevIndex => (prevIndex + 1) % slides.length)
+  }
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-    );
-  };
+      prevIndex => (prevIndex - 1 + slides.length) % slides.length
+    )
+  }
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(nextSlide, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section
@@ -57,7 +57,7 @@ const HeroSlider = () => {
             <div
               key={index}
               className={`slide flex items-center flex-wrap gap-6 ${
-                index === currentSlide ? "block" : "hidden"
+                index === currentSlide ? 'block' : 'hidden'
               }`}
             >
               <div className="content flex-1 min-w-0 animate-fadeLeft">
@@ -104,7 +104,7 @@ const HeroSlider = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSlider;
+export default HeroSlider
