@@ -7,7 +7,7 @@ const VideosSection = () => {
         <h2 className="text-4xl font-bold text-center mb-12">
           Team <span className="text-black">Videos</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <video controls className="w-full h-auto">

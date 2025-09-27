@@ -1,25 +1,24 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next'
+import './globals.css'
 
-import { Inter } from "next/font/google";
-import Script from "next/script";
+import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Baze University Athletics",
+  title: 'Baze University Athletics',
   description:
-    "Official website for Baze University Athletics - Starlets, Bulldogs, and more",
-};
+    'Official website for Baze University Athletics - Starlets, Bulldogs, and more',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
-  );
+  )
 }

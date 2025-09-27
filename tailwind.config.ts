@@ -11,12 +11,12 @@ module.exports = {
         'custom-gray': '#828488',
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       animation: {
-        'fadeLeft': 'fadeLeft 0.4s linear 0.4s backwards',
-        'fadeup': 'fadeup 0.4s linear backwards',
-      }
+        fadeLeft: 'fadeLeft 0.4s linear 0.4s backwards',
+        fadeup: 'fadeup 0.4s linear backwards',
+      },
     },
   },
   plugins: [],

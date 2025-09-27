@@ -8,34 +8,36 @@ const HeroSlider = () => {
 
   const slides = [
     {
-      image: "/assets/images/nusaybah2.png",
+      image: '/assets/images/nusaybah2.png',
       content: {
-        span: "Dare to dream",
-        title: "starlets"
-      }
+        span: 'Dare to dream',
+        title: 'starlets',
+      },
     },
     {
-      image: "/assets/images/nusaybah.png", 
+      image: '/assets/images/nusaybah.png',
       content: {
-        span: "Dare to dream",
-        title: "starlets"
-      }
+        span: 'Dare to dream',
+        title: 'starlets',
+      },
     },
     {
-      image: "/assets/images/nusaybah2.png",
+      image: '/assets/images/nusaybah2.png',
       content: {
-        span: "Dare to dream", 
-        title: "starlets"
-      }
-    }
+        span: 'Dare to dream',
+        title: 'starlets',
+      },
+    },
   ]
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
+    setCurrentSlide(prevIndex => (prevIndex + 1) % slides.length)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+    setCurrentSlide(
+      prevIndex => (prevIndex - 1 + slides.length) % slides.length
+    )
   }
 
   useEffect(() => {
@@ -44,7 +46,7 @@ const HeroSlider = () => {
   }, [])
 
   return (
-    <section 
+    <section
       className="relative pt-56 min-h-screen bg-cover bg-center flex items-center"
       style={{ backgroundImage: "url('/assets/images/teamphoto2.JPG')" }}
       id="home"
@@ -52,7 +54,7 @@ const HeroSlider = () => {
       <div className="container mx-auto px-8">
         <div className="slides-container relative">
           {slides.map((slide, index) => (
-            <div 
+            <div
               key={index}
               className={`slide flex items-center flex-wrap gap-6 ${
                 index === currentSlide ? 'block' : 'hidden'
@@ -65,7 +67,7 @@ const HeroSlider = () => {
                 <h3 className="text-6xl text-blue-100 py-2 font-bold uppercase">
                   {slide.content.title}
                 </h3>
-                <Link 
+                <Link
                   href="https://docs.google.com/forms/d/1jQhLQYVWiSpkaQGz7n9_Mg7rqIyyBuPN_pc3ieovhh4/edit"
                   target="_blank"
                   className="inline-block mt-4 px-12 py-3 bg-gray-500 text-black font-bold text-lg rounded-lg hover:bg-blue-100 hover:text-gray-500 transition-all duration-300"
@@ -74,8 +76,8 @@ const HeroSlider = () => {
                 </Link>
               </div>
               <div className="img flex-1 min-w-0">
-                <Image 
-                  src={slide.image} 
+                <Image
+                  src={slide.image}
                   alt={`Slide ${index + 1}`}
                   width={600}
                   height={400}
@@ -87,14 +89,14 @@ const HeroSlider = () => {
         </div>
 
         {/* Navigation arrows */}
-        <div 
+        <div
           className="absolute top-1/2 left-8 transform -translate-y-1/2 h-20 w-20 flex items-center justify-center bg-gray-500 text-blue-100 text-2xl cursor-pointer hover:bg-white hover:text-gray-500 transition-all duration-300 box-shadow-custom border border-gray-700"
           onClick={prevSlide}
         >
           <i className="fas fa-angle-left"></i>
         </div>
-        
-        <div 
+
+        <div
           className="absolute top-1/2 right-8 transform -translate-y-1/2 h-20 w-20 flex items-center justify-center bg-gray-500 text-blue-100 text-2xl cursor-pointer hover:bg-white hover:text-gray-500 transition-all duration-300 box-shadow-custom border border-gray-700"
           onClick={nextSlide}
         >
